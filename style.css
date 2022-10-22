@@ -1,0 +1,227 @@
+:root {
+    --principal: #0A2E58;
+    --secundary: #5DCE53;
+    --third: #0D2138;   
+    --padding:30px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/*----- GENERAL -----*/
+.post__img img {
+    height: 300px;
+}
+a {
+    color: rgb(222, 221, 221);
+    text-decoration: none;
+    font-weight: bolder;
+}
+li {
+    list-style: none;
+}
+button {
+    color: #fff;
+    border-style: none;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+.button--more {
+    background-color: var(--principal);
+    padding: 15px 30%;
+}
+.button--sales {
+    background-color: var(--secundary);
+    padding: 10px 30%;
+}
+/*----- HEADER -----*/
+/*--- NAV ---*/
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(23, 23, 23, 0.758), rgba(24, 24, 24, 0.786)),
+    url('img/startup.jpg');
+    background-position: start;
+    background-size: cover;
+    filter: opacity(660%);
+    position: relative;
+}
+.nav__items ul {
+    display: flex;
+}
+.nav__item {
+    padding: 10px 20px;
+}
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+}
+.nav__logo {
+    font-size: 2rem;
+}
+.main {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main__title {
+    font-size: 4.5rem;
+}
+.main__description {
+    width: 80%;
+    margin: auto;
+}
+/*----- WIDGETS ------*/
+.widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "widgets--1 widgets--2";
+}
+.widgets__container {
+    padding: var(--padding);
+    text-align: center;
+}
+.widgets--1 {
+    background-color: #000;
+    grid-area: widgets--1;
+}
+.widgets--2 {
+    background-color: var(--principal);
+    grid-area: widgets--2;
+}
+.widgets__title {
+    font-size: 1.6em;
+    margin: 15px;
+}
+.widgets__img {
+    height: 10vh;
+}
+.widgets__img img {
+    height: 100%;
+}
+.widgets__description {
+    text-align: justify;
+    margin: var(--padding) 0;
+}
+/*------ POST --------*/
+.post {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 60vh;
+}
+.post__img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.post__container {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding);
+}
+.post__title {
+    font-size: 1.7rem;
+    text-align: center;
+}
+.post__button {
+    width: 80%;
+}
+/*------ FORM --------*/
+.form {
+    background-color: var(--principal);
+    font-size: 1.6em;
+    text-align: center;
+    padding: var(--padding);
+}
+.form__container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+}
+.form__container input, textarea {
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px;
+}
+.form__button {
+    background-color: var(--third);
+    border-style: none;
+    color: #fff;
+    font-weight: bolder;
+}
+.form__container div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*------ FOOTER ------*/
+.footer{
+    background: black;
+    font-weight:bold;
+    padding: 50px;
+}
+.footer p, #tecnologia{
+    text-align: center;
+}
+span{
+    color: #2172C2;
+}
+/*media queries*/
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    .form__container div {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 991px){
+    .widgets {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "widgets--1"
+                             "widgets--2";
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display:  block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
